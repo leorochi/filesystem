@@ -1,0 +1,15 @@
+{
+  "name": "filesystem",
+  "version": "1.0.0",
+  "description": "Aprendendo sobre filesystem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Martins",
+  "license": "ISC",
+  "dependencies": {
+    "directory-tree": "^3.5.1",
+    "esprima": "^4.0.1"
+  }
+}

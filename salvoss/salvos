@@ -1,0 +1,43 @@
+//CREATE FILE
+
+// O fs.appendFile()método anexa conteúdo especificado a um arquivo. Se o arquivo não existir, o arquivo será criado:
+fs.appendFile('mynewfile1.txt', 'Hello content', ((err) => { 
+  if(err) throw err;
+  console.log('Saved!');
+}));
+
+// O fs.open()método recebe um "sinalizador" como segundo argumento, se o sinalizador for "w" para "escrita", o arquivo especificado é aberto para gravação. Se o arquivo não existir, um arquivo vazio será criado:
+fs.open('mynewfile2.txt', 'w', ((err, file) => {
+  if(err) throw err;
+  console.log('Saved!');
+}))
+
+// O fs.writeFile()método substitui o arquivo e o conteúdo especificados, se existirem. Se o arquivo não existir, um novo arquivo contendo o conteúdo especificado será criado:
+fs.writeFile('mynewfile3.txt', 'Hello content', ((err) => {
+  if(err) throw err;
+  console.log('Saved!')
+}))
+
+//UPDATE FILE
+
+// O fs.appendFile()método anexa o conteúdo especificado no final do arquivo especificado:
+fs.appendFile('mynewfile1.txt', 'This is my text', ((err) => {
+  if(err) throw err;
+  console.log('Update!');
+ }))
+
+ // O fs.writeFile()método substitui o arquivo e o conteúdo especificados:
+ fs.writeFile('mynewfile3.txt', 'This is my new text', ((err) => {
+  if(err) throw err;
+  console.log('Replaced!')
+ }))
+
+ fs.unlink('mynewfile2.txt', ((err) => {
+  if(err) throw err;
+  console.log('File deleted!');
+ }))
+
+ fs.rename('mynewfile1.txt', 'myrenamedfile.txt' ((err) => {
+  if(err) throw err;
+  console.log('File renamed')
+ }));
